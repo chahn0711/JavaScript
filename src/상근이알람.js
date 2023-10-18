@@ -11,7 +11,7 @@ min = Number(tmp);
 // 2. 입력 받은 시간을 분으로 환산으로 45분을 빼기
 calc = (hour * 60) + min;
 // 3. 만약 45분 뺀 시간이 이전 날짜로 되는 경우는 24시간만큼 더해주기
-if( calc > 45) calc = (24 * 60) + min;
+if( calc > 45) calc = (24 * 60) + min; //요까지는 할 수 있음20231018
 calc -= 45;
 hour = parseInt(calc / 60);
 min = calc % 60;
