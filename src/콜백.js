@@ -49,7 +49,8 @@ function makeCounter() {
         console.log(count);
     }
 }
-const counter = makeCounter();
+const counter = makeCounter(); // makeCounter를 호출하여 클로저를 생성하고 반환
+counter(); // 내부 함수를 호출하여 count를 증가하고 값 출력
 counter();
 counter();
-counter();
+
