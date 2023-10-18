@@ -71,5 +71,8 @@ let persons = [
     },
   ];
 
-  let pass = persons.filter(person => person.point > 80);
+  const pass = persons.filter(person => person.point > 80);
   console.log(pass);
+
+  const local = persons.filter(person => person.city == 제주);
+  console.log(local);
