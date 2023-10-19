@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>노드 추가/삭제하기</title>  <!-- 돔틀에 구성요소 = 노드 -->
+</head>
+<body>
+    <form action="#" name="frm"> 
+        <input type="text" name="id">
+        <input type="password" name="pw">
+    </form>
+
+    <!-- form 태그 안에 체크박스 -->
+    <Form action="">
+        <label for="apple"><input type="radio" name="fruits" id="apple" value="apple">사과</label>
+        <label for="banana"><input type="radio" name="fruits" id="banana" value="banana">바나나</label>
+        <label for="orange"><input type="radio" name="fruits" id="orange" value="orange">오렌지</label>
+        <label for="melon"><input type="radio" name="fruits" id="melon" value="melon">메론</label>
+    </Form>
+
+    <script>
+        const ckEls = document.querySelectorAll("[type='radio']");
+        for(let i = 0; i < ckEls.length; i++) {
+            if(ckEls[i].value === "orange") ckEls[i].checked = true;
+        }
+    </script>
+</body>
+</html>
