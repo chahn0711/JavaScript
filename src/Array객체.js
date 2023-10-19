@@ -41,6 +41,7 @@ let citrus2 = fruits.slice(1,3); // [Orange, Lemon]
 console.log(citrus);
 console.log(citrus2);
 
+// sort() : 배열에 문자형 데이터가 있는 경우 오름차순으로 정렬합니다.
 let fruits30 = ["Banana", "Orange", "Apple", "Mango"];
 fruits30.sort(); 
 console.log(fruits30);
@@ -74,5 +75,10 @@ let persons = [
   const pass = persons.filter(person => person.point > 80);
   console.log(pass);
 
-  const local = persons.filter(person => person.city == 제주);
+  const local = persons.filter(person => person.city === "제주");
   console.log(local);
+
+  // map() 메소드 : 배열의 각 요소를 변환하고, 그 결과를 새로운 배열로 반환하는 메서드 (리엑트에서 가장 많이 사용함)
+  const number = [1,2,3,4,5,6,7,8,9,10];
+  const squaredNumbers = number.map(num => num * num);
+  console.log(squaredNumbers);
