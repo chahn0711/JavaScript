@@ -1,0 +1,42 @@
+﻿<!-- 가입 요청 버튼은 비활성화 상태에서 시작하고 아이디/패스워드/이메일/전화번호 입력 조건을 만족하면 클릭 가능한 활성화 상태가 되도록 함. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/가입요청버튼.css">
+</head>
+<body>
+    <div id="container">
+        <form action="#">
+            <div class="id-input-box">
+                <input type="text" id="id-txt" placeholder="아이디 입력"> 
+                <!-- placeholder : 인라인 요소인 input(사용자가 데이터를 입력하는 요소)과 함께 쓰임 속성은 힌트 속성 -->
+                <!-- 주로 칸 누르면 사라지게 할때 쓰이기 때문에 회원가입이나 로그인 할때 사용 -->
+                <p class="id_input_check"></p>
+                <button class="input_confirm_btn" id="id_confirm">확인</button>
+            </div>
+            <div class="pw-input-box">
+                <input type="password" id="pw-txt" placeholder="패스워드 입력"> 
+                <p class="pw_input_check"></p>
+                <button class="input_confirm_btn" id="pw_confirm">확인</button>
+            </div>
+            <div class="email-input-box">
+                <input type="email" id="email-txt" placeholder="이메일 입력"> 
+                <p class="email_input_check"></p>
+                <button class="input_confirm_btn" id="email_confirm">확인</button>
+            </div>
+            <div class="phone-input-box">
+                <input type="tel" id="phone-txt" placeholder="전화번호 입력"> 
+                <p class="phone_input_check"></p>
+                <button class="input_confirm_btn" id="phone_confirm">확인</button>
+            </div>
+            <button class="">가입요청</button>
+    
+        </form>
+    </div>
+
+    <script src="../src/가입요청버튼.js"></script>
+</body>
+</html>
