@@ -1,0 +1,58 @@
+﻿<!-- 버튼을 클릭하면 경고창 출력하기 -->
+<!-- 인라인 방식 또는 이벤트 등록 방식으로 구현 -->
+<!-- 1. 컨테이너에 버튼을 만든다 
+     2. style을 지정해서 넣은다(vw나 flex-grow를 이용하여 모양을 지정)
+     3. script에 함수 만들어서 넣은다.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>버튼경고</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        #container{
+            display: flex;
+            width:  500px; /* vw로 바꾸면 반응형 웹처럼 바뀜*/
+            margin: 10px auto;
+        }
+        .btn{
+            margin: 2px;
+            flex-grow: 1; /* 자식 요소에만 들어감 남는 부분 채움 */
+            display: flex;
+            justify-content: center;
+            border: 1px solid #ccc;
+            padding: 10px 16px;
+            color: white;
+            border-radius: 2px;
+        }
+        .green{
+            background-color: green;
+        }
+        .orange{
+            background-color: orange;
+        }
+        .purple{
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="btn green">Green</div>
+        <div class="btn orange">Orange</div>
+        <div class="btn purple">Purple</div>
+    </div>
+    <script>
+        const btns = document.querySelectorAll(".btn"); /*버튼(.btn)을 다 찾아서 btns에 넣어라 어떻게? for문으로*/
+        for(let i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function(){
+                alert( `${this.textContent} 버튼이 눌러졌습니다.`); /* 여기서 this는 누를때 this가 결정됨 */
+            })
+        }
+    </script>
+</body>
+</html>
